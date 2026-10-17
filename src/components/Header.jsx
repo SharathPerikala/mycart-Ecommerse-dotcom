@@ -91,13 +91,13 @@ function Header({ cartCount = 0 }){
             <Link class="nav-link"to="/Helpline" onClick={() => setMenuOpen(false)}>
             <li class="nav-item">Helpline</li>
             </Link>
-            <Link class="nav-link"to="/Cart" onClick={() => setMenuOpen(false)}>
+            <Link className="nav-link nav-action-link" to="/Cart" onClick={() => setMenuOpen(false)}>
             <li class="navbar-brand">Cart ({cartCount}) <i class="fas fa-shopping-cart"></i></li>
             </Link>
-            <Link class="nav-link"to="/Wishlist" onClick={() => setMenuOpen(false)}>
+            <Link className="nav-link nav-action-link" to="/Wishlist" onClick={() => setMenuOpen(false)}>
             <li class="navbar-brand"><span className="nav-wishlist-heart" aria-hidden="true">♥</span> Wishlist ({wishlistItems.length})</li>
             </Link>
-            <Link class="nav-link"to="/Signin" onClick={() => setMenuOpen(false)}>
+            <Link className="nav-link nav-action-link" to="/Signin" onClick={() => setMenuOpen(false)}>
             <li class="navbar-brand">Sign In <i class="fas fa-user-circle"></i></li>
             </Link>
             
