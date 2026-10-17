@@ -134,6 +134,16 @@ h1{
 .pricing-column{
     position: relative;
 }
+.catalog-section-title{
+    padding: 8px 20px;
+    text-align: center;
+}
+.catalog-section-title h1{
+    display: block;
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.25;
+}
 .wishlist-heart{
     display: inline-grid;
     width: 42px;
