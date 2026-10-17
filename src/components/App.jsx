@@ -102,9 +102,9 @@ function App(){
     };
 
     return <WishlistProvider>
-      <div>
+      <div className="app-shell">
         <Router>
-        <div onClick={handleProductAction}>
+        <div className="app-content" onClick={handleProductAction}>
         <Header cartCount={cartItems.reduce((total, item) => total + item.quantity, 0)} />
         
         <Switch>

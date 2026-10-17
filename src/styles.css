@@ -1,3 +1,13 @@
+.app-shell{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.app-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
 h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 3.5rem;
@@ -416,7 +426,6 @@ nav.navbar.navbar-dark .navbar-nav .nav-link:focus-visible{
 /*footer*/
 .topstories{
     color: black;
-    margin-top: 500px;
     background-color:black;
 }
 footer{
@@ -435,21 +444,18 @@ footer i:hover{
 }
 /*signin page */
 .signinpage{
-margin-top: 10px;
-
-background-position: center;
-font-family: sans-serif;
-width: 350px;
-height: 460px;
-background: #e31b23;
-color:white;
-top: 60%;
-left: 50%;
-position: absolute;
-transform: translate(-50%,-50%);
-box-sizing: border-box;
-padding: 50px 30px;
-border-radius: 10px;
+    margin: auto;
+    background-position: center;
+    font-family: sans-serif;
+    width: min(100% - 28px, 350px);
+    height: auto;
+    min-height: 460px;
+    background: #e31b23;
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    border-radius: 10px;
 }
 .loginh1{
     margin: 0;
@@ -466,7 +472,8 @@ border-radius: 10px;
     width: 100%;
     margin-bottom: 20px;
 }
-.signinpage input[type="text"], input[type="password"]{
+.signinpage input[type="text"],
+.signinpage input[type="password"]{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -475,6 +482,10 @@ border-radius: 10px;
     color:white;
     font-weight: 500;
     font-size: 16px;
+}
+.signinpage input::placeholder{
+    color: #fff;
+    opacity: 1;
 }
 .signinpage input[type="submit"]
 {
@@ -733,16 +744,6 @@ display: inline;
     }
     .carousel-img{
         padding: 24px 12px;
-    }
-    .signinpage{
-        position: relative;
-        top: auto;
-        left: auto;
-        width: min(100% - 28px, 350px);
-        height: auto;
-        min-height: 460px;
-        margin: 24px auto;
-        transform: none;
     }
     table{
         display: block;
