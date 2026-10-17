@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/mycart-Ecommerse/static/js/main.b1a19648.chunk.js",
+    "main.js.map": "/mycart-Ecommerse/static/js/main.b1a19648.chunk.js.map",
+    "runtime-main.js": "/mycart-Ecommerse/static/js/runtime-main.6454550f.js",
+    "runtime-main.js.map": "/mycart-Ecommerse/static/js/runtime-main.6454550f.js.map",
+    "static/js/2.a69dda97.chunk.js": "/mycart-Ecommerse/static/js/2.a69dda97.chunk.js",
+    "static/js/2.a69dda97.chunk.js.map": "/mycart-Ecommerse/static/js/2.a69dda97.chunk.js.map",
+    "index.html": "/mycart-Ecommerse/index.html",
+    "precache-manifest.30e43cd01f3caa159314e646e706c045.js": "/mycart-Ecommerse/precache-manifest.30e43cd01f3caa159314e646e706c045.js",
+    "service-worker.js": "/mycart-Ecommerse/service-worker.js",
+    "static/js/2.a69dda97.chunk.js.LICENSE.txt": "/mycart-Ecommerse/static/js/2.a69dda97.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6454550f.js",
+    "static/js/2.a69dda97.chunk.js",
+    "static/js/main.b1a19648.chunk.js"
+  ]
+}
