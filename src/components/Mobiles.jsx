@@ -92,7 +92,7 @@ function Mobiles(){
         <div class="row">
 
        <div className="pricing-column col-lg-3 col-md-6">
-        <div className="card-body"><img src={process.env.PUBLIC_URL + "/images/mobileimages/Oppo A1K.jpeg"}alt=""  /></div>
+        <div className="card-body"><img src={process.env.PUBLIC_URL + "/images/mobileimages/Oppo A1k.jpeg"}alt=""  /></div>
        <div className="card-header"><h6>Oppo A1K (Red, 32 GB)</h6><p>Oppo A1K 2 GB RAM | 32 GB ROM | Expandable Upto 256 GB|15.49 cm (6.1 inch) Display| 5MP Front Camera</p><h4> ₹7,990</h4>
 <button type="button" className="btn btn-danger">Add to Cart</button><WishlistButton /> 
 <p><i class="fas fa-truck"></i> Free Shipping</p>
