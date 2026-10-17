@@ -123,7 +123,7 @@ function App(){
         <Route path="/Sports" component={Sports}/>
         <Route path="/Helpline" component={Helpline}/>
         <Route path="/Cart" render={() => <Cart items={cartItems} updateQuantity={updateQuantity} removeFromCart={removeFromCart} clearCart={() => setCartItems([])} />}/>
-        <Route path="/Signin" component={Signin}/>
+        <Route path="/Signin" render={() => <main className="signin-layout"><Signin/></main>}/>
         <Route path="/Search" component={SearchResults}/>
         <Route path="/Wishlist" component={Wishlist}/>
 
