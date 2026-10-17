@@ -787,3 +787,30 @@ nav.navbar .navbar-nav .navbar-brand{
     line-height: 1.25;
     white-space: normal;
 }
+.mobile-nav-toggle{
+    display: none;
+}
+
+@media (max-width: 575.98px){
+    nav.navbar .navbar-nav{
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    }
+    nav.navbar:not(.mobile-nav-expanded) .navbar-nav > .nav-link:first-child,
+    nav.navbar:not(.mobile-nav-expanded) .navbar-nav > .nav-link:nth-child(n+5){
+        display: none;
+    }
+    .mobile-nav-toggle{
+        display: block;
+        width: 100%;
+        padding: 7px 12px;
+        border: 0;
+        background: transparent;
+        color: #fff;
+        font: inherit;
+        text-align: center;
+    }
+    .mobile-nav-toggle:focus-visible{
+        outline: 2px solid #fff;
+        outline-offset: -2px;
+    }
+}

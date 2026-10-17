@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {Link, useHistory, useLocation}from "react-router-dom";
 import { getProducts } from "./productCatalog";
 import { searchProducts as findProducts } from "./productSearch";
@@ -9,10 +9,15 @@ function Header({ cartCount = 0 }){
     const history = useHistory();
     const location = useLocation();
     const [suggestionsOpen, setSuggestionsOpen] = useState(false);
+    const [mobileNavExpanded, setMobileNavExpanded] = useState(false);
     const { items: wishlistItems } = useWishlist();
     const query = new URLSearchParams(location.search).get("q") || "";
     const products = React.useMemo(() => getProducts(), []);
     const suggestions = query.trim() ? findProducts(products, query).slice(0, 8) : [];
+
+    useEffect(() => {
+        setMobileNavExpanded(false);
+    }, [location.pathname]);
 
     const updateSearch = (event) => {
         const value = event.target.value;
@@ -42,9 +47,9 @@ function Header({ cartCount = 0 }){
           <div className="main" id="demo"><h1 className="logo"><i class="fas fa-people-carry"></i> mycart</h1><form className="product-search" onSubmit={searchProducts}><input className="searchinput" name="productSearch" type="search" placeholder="Search for products, brands and more" aria-label="Search products" aria-autocomplete="list" aria-expanded={suggestionsOpen && suggestions.length > 0} aria-controls="product-suggestions" value={query} onFocus={() => setSuggestionsOpen(Boolean(query.trim()))} onBlur={() => setSuggestionsOpen(false)} onChange={updateSearch}></input>{suggestionsOpen && suggestions.length > 0 && <ul className="product-suggestions" id="product-suggestions" role="listbox">{suggestions.map((product) => <li key={product.id}><button type="button" role="option" onMouseDown={(event) => event.preventDefault()} onClick={() => selectSuggestion(product)}><span>{product.title}</span><small>{product.category}</small></button></li>)}</ul>}<button className="searchbutton" type="submit"><i class="fas fa-search"></i> Search</button></form></div>
             
         </section>
-        <nav className="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
+        <nav className={`navbar navbar-expand-lg navbar-dark${mobileNavExpanded ? " mobile-nav-expanded" : ""}`} aria-label="Main navigation">
         <div className="navbar-collapse">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto" id="category-navigation">
             
            <Link class="nav-link" to="/Mycart">
             <li class="navbar-brand">mycart</li>
@@ -94,6 +99,15 @@ function Header({ cartCount = 0 }){
             
         
     </ul>
+    <button
+        className="mobile-nav-toggle"
+        type="button"
+        aria-expanded={mobileNavExpanded}
+        aria-controls="category-navigation"
+        onClick={() => setMobileNavExpanded((expanded) => !expanded)}
+    >
+        {mobileNavExpanded ? "Show fewer categories" : "More categories"}
+    </button>
     
      
  </div>
