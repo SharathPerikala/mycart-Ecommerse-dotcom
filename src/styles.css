@@ -397,7 +397,6 @@ h1{
 nav.navbar.navbar-dark .navbar-nav .nav-link{
     color: #fff;
     font-weight: 500;
-    transition: background-color .15s ease;
 }
 nav.navbar.navbar-dark .navbar-nav .nav-link:hover,
 nav.navbar.navbar-dark .navbar-nav .nav-link:focus-visible{
@@ -405,29 +404,13 @@ nav.navbar.navbar-dark .navbar-nav .nav-link:focus-visible{
     border-radius: 4px;
 }
 nav.navbar.navbar-dark .navbar-nav .nav-link:hover{
-    animation: nav-hover-blink .9s ease-in-out infinite alternate;
-}
-nav.navbar.navbar-dark .navbar-nav .nav-action-link:hover{
-    background-color: #005bff;
-    animation: nav-hover-blink .9s ease-in-out infinite alternate;
-}
-@keyframes nav-hover-blink{
-    from{ background-color: transparent; }
-    to{ background-color: #005bff; }
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 nav.navbar.navbar-dark .navbar-nav .nav-link:focus-visible{
-    background-color: #005bff;
     outline: 2px solid #fff;
     outline-offset: 2px;
-}
-@media (prefers-reduced-motion: reduce){
-    nav.navbar.navbar-dark .navbar-nav .nav-link{
-        transition: none;
-    }
-    nav.navbar.navbar-dark .navbar-nav .nav-link:hover{
-        animation: none;
-        background-color: #005bff;
-    }
 }
 
 /*footer*/
