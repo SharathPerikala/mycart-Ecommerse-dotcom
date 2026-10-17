@@ -9,7 +9,7 @@ h1{
     align-items: center;
     gap: 12px 20px;
     color: white;
-    background-color: #d92027;
+    background-color: #e31b23;
     padding: 2% 0 0 5%;
     }
 .main .logo{
@@ -17,7 +17,7 @@ h1{
     margin: 0;
 }
     .tagline{
-        background-color: #d92027;
+        background-color: #e31b23;
         color: white;
     }
 .searchinput{
@@ -111,7 +111,7 @@ h1{
     cursor: pointer;
 }
 .product-image-button:focus{
-    outline: 3px solid #d92027;
+    outline: 3px solid #e31b23;
     outline-offset: -3px;
 }
 .pricing-column{
@@ -122,10 +122,10 @@ h1{
     width: 42px;
     height: 42px;
     place-items: center;
-    border: 1px solid rgba(217, 32, 39, .35);
+    border: 1px solid rgba(227, 27, 35, .45);
     border-radius: 50%;
     background: #fff;
-    color: #d92027;
+    color: #e31b23;
     font-size: 1.8rem;
     line-height: 1;
     cursor: pointer;
@@ -139,7 +139,7 @@ h1{
 }
 .wishlist-heart:hover,
 .wishlist-heart.is-wishlisted{
-    color: #d92027;
+    color: #e31b23;
     background: #fff3f3;
 }
 .wishlist-heart:disabled{
@@ -205,7 +205,7 @@ h1{
     font-size: 1.5rem;
 }
 .product-details-content strong{
-    color: #d92027;
+    color: #e31b23;
     font-size: 1.25rem;
 }
 .product-details-actions{
@@ -234,7 +234,7 @@ h1{
     font-size: 1rem;
 }
 .search-product-info strong{
-    color: #d92027;
+    color: #e31b23;
 }
 .search-add-to-cart{
     display: block;
@@ -377,11 +377,11 @@ h1{
 }
 .nav-item{  
     
-    background-color:#d92027 ;
+    background-color:#e31b23 ;
     padding: 2px;
    }
 .navbar{
-    background-color: #d92027;
+    background-color: #e31b23;
     width: 100%;
     padding-top: 30px;
     position: sticky;
@@ -389,7 +389,14 @@ h1{
     z-index: 1030;
     }
 .navbar-collapse{
-    background-color:#d92027;
+    background-color:#e31b23;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: #fff;
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus{
+    color: #fff;
 }
 
 /*footer*/
@@ -399,15 +406,15 @@ h1{
     background-color:black;
 }
 footer{
-    background-color: #d92027;
+    background-color: #e31b23;
     padding: 20px;
-    color: rgba(255,255,255,.5);
+    color: #fff;
     text-align: center;
     height: 30%;
 }
 footer i{
     padding: 1% .5%;
-    color: rgba(255,255,255,.5);
+    color: #fff;
    }
 footer i:hover{
     color: white;
@@ -420,7 +427,7 @@ background-position: center;
 font-family: sans-serif;
 width: 350px;
 height: 460px;
-background: #d92027;
+background: #e31b23;
 color:white;
 top: 60%;
 left: 50%;
@@ -566,7 +573,7 @@ height: 60px;
 
 .helplinebutton:hover{
   color: white;
-  background-color:#d92027; 
+  background-color:#e31b23;
 }
 table {
 display: inline;
